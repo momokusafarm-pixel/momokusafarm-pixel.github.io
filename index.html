@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Momokusa Studio — iOS アプリ開発スタジオ。Eventick、Habitile などをリリース。">
+  <title>Momokusa Studio</title>
+  <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-subtle: #f7f7f8;
+      --text: #1a1a1a;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #1f2937;
+
+      --eventick: #3B82F6;
+      --eventick-bg: #eff6ff;
+      --habitile: #00695C;
+      --habitile-bg: #e0f2f1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1115;
+        --bg-subtle: #1a1d24;
+        --text: #f3f4f6;
+        --text-muted: #9ca3af;
+        --border: #2a2f3a;
+        --accent: #f3f4f6;
+
+        --eventick: #60a5fa;
+        --eventick-bg: #1e3a5f;
+        --habitile: #4db6ac;
+        --habitile-bg: #1f3a37;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                   "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo,
+                   "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px 80px;
+    }
+
+    /* ===== ヘッダー ===== */
+    header {
+      margin-bottom: 64px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      color: var(--text-muted);
+      font-size: 17px;
+    }
+
+    /* ===== セクション ===== */
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 16px;
+      color: var(--text);
+      max-width: 620px;
+    }
+
+    .description p + p {
+      margin-top: 14px;
+    }
+
+    /* ===== アプリカード ===== */
+    .apps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .app-card {
+      display: block;
+      padding: 24px 28px;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: var(--text);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--app-color, var(--accent));
+    }
+
+    .app-card .app-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--app-bg, var(--bg-subtle));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+
+    .app-icon-inner {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--app-color, var(--accent));
+    }
+
+    .app-name {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .app-tagline {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+      margin-left: 58px;
+    }
+
+    .app-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-left: 58px;
+    }
+
+    .app-link {
+      font-size: 13px;
+      color: var(--app-color, var(--accent));
+      text-decoration: none;
+      padding: 6px 12px;
+      background: var(--app-bg, var(--bg-subtle));
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .app-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Eventick / Habitile 個別変数 */
+    .app-card.eventick {
+      --app-color: var(--eventick);
+      --app-bg: var(--eventick-bg);
+    }
+
+    .app-card.habitile {
+      --app-color: var(--habitile);
+      --app-bg: var(--habitile-bg);
+    }
+
+    /* ===== お問い合わせ ===== */
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+    }
+
+    .contact a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* ===== フッター ===== */
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    /* ===== モバイル調整 ===== */
+    @media (max-width: 480px) {
+      .container {
+        padding: 40px 20px 56px;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      header {
+        margin-bottom: 48px;
+      }
+
+      section {
+        margin-bottom: 44px;
+      }
+
+      .app-card {
+        padding: 20px 22px;
+      }
+
+      .app-tagline,
+      .app-links {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">Momokusa Studio</div>
+      <p class="tagline">日常を少し整える iOS アプリを作っています。</p>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <div class="description">
+        <p>Momokusa Studio は、日本の独立系アプリ開発スタジオです。シンプルで日々の暮らしに寄り添うアプリづくりを目指しています。</p>
+        <p>すべてのアプリは広告と一部機能の購入によって運営されており、ユーザーの個人を特定するデータは収集していません。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Apps</h2>
+      <div class="apps">
+
+        <a class="app-card eventick" href="https://apps.apple.com/jp/app/eventick/id6766795134">
+          <div class="app-header">
+            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-name">Eventick</div>
+          </div>
+          <p class="app-tagline">予定までの時間を、日数＋時間でカウントダウン。</p>
+          <div class="app-links">
+            <span class="app-link">App Store で見る ↗</span>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/eventick-privacy/" onclick="event.stopPropagation();">プライバシーポリシー</a>
+          </div>
+        </a>
+
+        <a class="app-card habitile" href="https://apps.apple.com/jp/app/habitile/id6764686513">
+          <div class="app-header">
+            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-name">Habitile</div>
+          </div>
+          <p class="app-tagline">タイルで習慣を可視化する、シンプルな習慣トラッカー。</p>
+          <div class="app-links">
+            <span class="app-link">App Store で見る ↗</span>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/habitile-privacy/" onclick="event.stopPropagation();">プライバシーポリシー</a>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>ご質問・ご要望は <a href="mailto:momokusa.farm@gmail.com">momokusa.farm@gmail.com</a> までお気軽にどうぞ。</p>
+    </section>
+
+    <footer>
+      © 2026 Momokusa Studio. All rights reserved.
+    </footer>
+
+  </div>
+</body>
+</html>
