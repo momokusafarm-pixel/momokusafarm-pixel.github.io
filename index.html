@@ -6,6 +6,9 @@
   <meta name="description" content="Momokusa Studio — iOS アプリ開発スタジオ。Eventick、Habitile などをリリース。">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
+  <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
+  <link rel="alternate" hreflang="en" href="https://momokusafarm-pixel.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://momokusafarm-pixel.github.io/">
   <style>
     :root {
       --bg: #ffffff;
@@ -63,6 +66,33 @@
       max-width: 760px;
       margin: 0 auto;
       padding: 64px 24px 80px;
+    }
+
+    /* ===== 言語切り替え ===== */
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 24px;
+      font-size: 13px;
+    }
+
+    .lang-switch a,
+    .lang-switch span {
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 4px 8px;
+    }
+
+    .lang-switch a:hover {
+      color: var(--accent);
+    }
+
+    .lang-switch .current {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .lang-switch .separator {
+      color: var(--border);
     }
 
     /* ===== ヘッダー ===== */
@@ -252,6 +282,12 @@
 </head>
 <body>
   <div class="container">
+
+    <div class="lang-switch">
+      <span class="current">日本語</span>
+      <span class="separator">/</span>
+      <a href="/en/">English</a>
+    </div>
 
     <header>
       <div class="logo">Momokusa Studio</div>
