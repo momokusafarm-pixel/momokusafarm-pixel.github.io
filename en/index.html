@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS app development studio. Releasing Eventick, Habitile, findmemo, and more.">
+  <meta name="description" content="Momokusa Studio — iOS app development studio. Releasing Eventick, Habitile, FindMemo, and more.">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/en/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -17,7 +17,7 @@
       --text-muted: #6b7280;
       --border: #e5e7eb;
       --accent: #1f2937;
-
+ 
       --eventick: #3B82F6;
       --eventick-bg: #eff6ff;
       --habitile: #00695C;
@@ -25,7 +25,7 @@
       --findmemo: #F97316;
       --findmemo-bg: #fff7ed;
     }
-
+ 
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0f1115;
@@ -34,7 +34,7 @@
         --text-muted: #9ca3af;
         --border: #2a2f3a;
         --accent: #f3f4f6;
-
+ 
         --eventick: #60a5fa;
         --eventick-bg: #1e3a5f;
         --habitile: #4db6ac;
@@ -43,17 +43,17 @@
         --findmemo-bg: #3a2814;
       }
     }
-
+ 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
+ 
     html {
       -webkit-text-size-adjust: 100%;
     }
-
+ 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
                    "Segoe UI", Roboto, sans-serif;
@@ -64,45 +64,45 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
-
+ 
     .container {
       max-width: 760px;
       margin: 0 auto;
       padding: 64px 24px 80px;
     }
-
+ 
     /* ===== 言語切り替え ===== */
     .lang-switch {
       text-align: right;
       margin-bottom: 24px;
       font-size: 13px;
     }
-
+ 
     .lang-switch a,
     .lang-switch span {
       color: var(--text-muted);
       text-decoration: none;
       padding: 4px 8px;
     }
-
+ 
     .lang-switch a:hover {
       color: var(--accent);
     }
-
+ 
     .lang-switch .current {
       color: var(--accent);
       font-weight: 600;
     }
-
+ 
     .lang-switch .separator {
       color: var(--border);
     }
-
+ 
     /* ===== ヘッダー ===== */
     header {
       margin-bottom: 64px;
     }
-
+ 
     .logo {
       font-size: 28px;
       font-weight: 700;
@@ -110,17 +110,17 @@
       color: var(--text);
       margin-bottom: 12px;
     }
-
+ 
     .tagline {
       color: var(--text-muted);
       font-size: 17px;
     }
-
+ 
     /* ===== セクション ===== */
     section {
       margin-bottom: 56px;
     }
-
+ 
     h2 {
       font-size: 13px;
       font-weight: 600;
@@ -129,23 +129,23 @@
       color: var(--text-muted);
       margin-bottom: 20px;
     }
-
+ 
     .description {
       font-size: 16px;
       color: var(--text);
       max-width: 620px;
     }
-
+ 
     .description p + p {
       margin-top: 14px;
     }
-
+ 
     /* ===== アプリカード ===== */
     .apps {
       display: grid;
       gap: 16px;
     }
-
+ 
     .app-card {
       display: block;
       padding: 24px 28px;
@@ -156,19 +156,19 @@
       color: var(--text);
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
-
+ 
     .app-card:hover {
       transform: translateY(-2px);
       border-color: var(--app-color, var(--accent));
     }
-
+ 
     .app-card .app-header {
       display: flex;
       align-items: center;
       gap: 14px;
       margin-bottom: 10px;
     }
-
+ 
     .app-icon {
       width: 44px;
       height: 44px;
@@ -180,34 +180,34 @@
       flex-shrink: 0;
       border: 1px solid var(--border);
     }
-
+ 
     .app-icon-inner {
       width: 24px;
       height: 24px;
       border-radius: 6px;
       background: var(--app-color, var(--accent));
     }
-
+ 
     .app-name {
       font-size: 19px;
       font-weight: 600;
       letter-spacing: -0.01em;
     }
-
+ 
     .app-tagline {
       color: var(--text-muted);
       font-size: 15px;
       margin-bottom: 16px;
       margin-left: 58px;
     }
-
+ 
     .app-links {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-left: 58px;
     }
-
+ 
     .app-link {
       font-size: 13px;
       color: var(--app-color, var(--accent));
@@ -217,37 +217,37 @@
       border-radius: 6px;
       font-weight: 500;
     }
-
+ 
     .app-link:hover {
       text-decoration: underline;
     }
-
+ 
     .app-card.eventick {
       --app-color: var(--eventick);
       --app-bg: var(--eventick-bg);
     }
-
+ 
     .app-card.habitile {
       --app-color: var(--habitile);
       --app-bg: var(--habitile-bg);
     }
-
+ 
     .app-card.findmemo {
       --app-color: var(--findmemo);
       --app-bg: var(--findmemo-bg);
     }
-
+ 
     .contact a {
       color: var(--accent);
       text-decoration: none;
       border-bottom: 1px solid var(--border);
       padding-bottom: 1px;
     }
-
+ 
     .contact a:hover {
       border-bottom-color: var(--accent);
     }
-
+ 
     footer {
       margin-top: 80px;
       padding-top: 32px;
@@ -255,28 +255,28 @@
       color: var(--text-muted);
       font-size: 13px;
     }
-
+ 
     @media (max-width: 480px) {
       .container {
         padding: 40px 20px 56px;
       }
-
+ 
       .logo {
         font-size: 24px;
       }
-
+ 
       header {
         margin-bottom: 48px;
       }
-
+ 
       section {
         margin-bottom: 44px;
       }
-
+ 
       .app-card {
         padding: 20px 22px;
       }
-
+ 
       .app-tagline,
       .app-links {
         margin-left: 0;
@@ -286,18 +286,18 @@
 </head>
 <body>
   <div class="container">
-
+ 
     <div class="lang-switch">
       <a href="/">日本語</a>
       <span class="separator">/</span>
       <span class="current">English</span>
     </div>
-
+ 
     <header>
       <div class="logo">Momokusa Studio</div>
       <p class="tagline">Crafting iOS apps that gently shape everyday life.</p>
     </header>
-
+ 
     <section>
       <h2>About</h2>
       <div class="description">
@@ -305,59 +305,60 @@
         <p>All of our apps are supported by advertising and optional in-app purchases. We do not collect any personally identifiable information from users.</p>
       </div>
     </section>
-
+ 
     <section>
       <h2>Apps</h2>
       <div class="apps">
-
-        <a class="app-card eventick" href="https://apps.apple.com/app/eventick/id6766795134">
+ 
+        <div class="app-card eventick">
           <div class="app-header">
             <div class="app-icon"><div class="app-icon-inner"></div></div>
             <div class="app-name">Eventick</div>
           </div>
           <p class="app-tagline">Count down to your events in days and hours.</p>
           <div class="app-links">
-            <span class="app-link">View on App Store ↗</span>
-            <a class="app-link" href="https://momokusafarm-pixel.github.io/eventick-privacy/" onclick="event.stopPropagation();">Privacy Policy</a>
+            <a class="app-link" href="https://apps.apple.com/app/eventick/id6766795134">View on App Store ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/eventick-privacy/">Privacy Policy</a>
           </div>
-        </a>
-
-        <a class="app-card habitile" href="https://apps.apple.com/app/habitile/id6764686513">
+        </div>
+ 
+        <div class="app-card habitile">
           <div class="app-header">
             <div class="app-icon"><div class="app-icon-inner"></div></div>
             <div class="app-name">Habitile</div>
           </div>
           <p class="app-tagline">A simple habit tracker that visualizes your routine with tiles.</p>
           <div class="app-links">
-            <span class="app-link">View on App Store ↗</span>
-            <a class="app-link" href="https://momokusafarm-pixel.github.io/habitile-privacy/" onclick="event.stopPropagation();">Privacy Policy</a>
+            <a class="app-link" href="https://apps.apple.com/app/habitile/id6764686513">View on App Store ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/habitile-privacy/">Privacy Policy</a>
           </div>
-        </a>
-
-        <a class="app-card findmemo" href="https://apps.apple.com/app/findmemo/id6774867969">
+        </div>
+ 
+        <div class="app-card findmemo">
           <div class="app-header">
             <div class="app-icon"><div class="app-icon-inner"></div></div>
             <div class="app-name">FindMemo</div>
           </div>
           <p class="app-tagline">Organize notes in folders and find them fast.</p>
           <div class="app-links">
-            <span class="app-link">View on App Store ↗</span>
-            <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/" onclick="event.stopPropagation();">Privacy Policy</a>
+            <a class="app-link" href="https://apps.apple.com/app/findmemo/id6774867969">View on App Store ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/">Privacy Policy</a>
           </div>
-        </a>
-
+        </div>
+ 
       </div>
     </section>
-
+ 
     <section class="contact">
       <h2>Contact</h2>
       <p>For questions or feedback, feel free to reach out at <a href="mailto:momokusa.farm@gmail.com">momokusa.farm@gmail.com</a>.</p>
     </section>
-
+ 
     <footer>
       © 2026 Momokusa Studio. All rights reserved.
     </footer>
-
+ 
   </div>
 </body>
 </html>
+ 
