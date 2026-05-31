@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS アプリ開発スタジオ。Eventick、Habitile などをリリース。">
+  <meta name="description" content="Momokusa Studio — iOS アプリ開発スタジオ。Eventick、Habitile、findmemo などをリリース。">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -22,6 +22,8 @@
       --eventick-bg: #eff6ff;
       --habitile: #00695C;
       --habitile-bg: #e0f2f1;
+      --findmemo: #F97316;
+      --findmemo-bg: #fff7ed;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -37,6 +39,8 @@
         --eventick-bg: #1e3a5f;
         --habitile: #4db6ac;
         --habitile-bg: #1f3a37;
+        --findmemo: #fb923c;
+        --findmemo-bg: #3a2814;
       }
     }
 
@@ -230,6 +234,11 @@
       --app-bg: var(--habitile-bg);
     }
 
+    .app-card.findmemo {
+      --app-color: var(--findmemo);
+      --app-bg: var(--findmemo-bg);
+    }
+
     /* ===== お問い合わせ ===== */
     .contact a {
       color: var(--accent);
@@ -327,6 +336,18 @@
           <div class="app-links">
             <span class="app-link">App Store で見る ↗</span>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/habitile-privacy/" onclick="event.stopPropagation();">プライバシーポリシー</a>
+          </div>
+        </a>
+
+        <a class="app-card findmemo" href="https://apps.apple.com/jp/app/findmemo/id6774867969">
+          <div class="app-header">
+            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-name">findmemo</div>
+          </div>
+          <p class="app-tagline">フォルダで整理して、検索ですぐ見つかるメモ。</p>
+          <div class="app-links">
+            <span class="app-link">App Store で見る ↗</span>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/" onclick="event.stopPropagation();">プライバシーポリシー</a>
           </div>
         </a>
 
