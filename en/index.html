@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS app development studio. Releasing Eventick, Habitile, FindMemo, and more.">
+  <meta name="description" content="Momokusa Studio — Making iOS apps. Releasing Eventick, Habitile, FindMemo, PaperPlanner, and more.">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/en/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -24,6 +24,8 @@
       --habitile-bg: #e0f2f1;
       --findmemo: #F97316;
       --findmemo-bg: #fff7ed;
+      --paperplanner: #A16207;
+      --paperplanner-bg: #fefce8;
     }
  
     @media (prefers-color-scheme: dark) {
@@ -41,6 +43,8 @@
         --habitile-bg: #1f3a37;
         --findmemo: #fb923c;
         --findmemo-bg: #3a2814;
+        --paperplanner: #d4a84b;
+        --paperplanner-bg: #38300f;
       }
     }
  
@@ -236,6 +240,11 @@
       --app-color: var(--findmemo);
       --app-bg: var(--findmemo-bg);
     }
+
+    .app-card.paperplanner {
+      --app-color: var(--paperplanner);
+      --app-bg: var(--paperplanner-bg);
+    }
  
     .contact a {
       color: var(--accent);
@@ -295,13 +304,13 @@
  
     <header>
       <div class="logo">Momokusa Studio</div>
-      <p class="tagline">Crafting iOS apps that gently shape everyday life.</p>
+      <p class="tagline">Making simple iOS apps.</p>
     </header>
  
     <section>
       <h2>About</h2>
       <div class="description">
-        <p>Momokusa Studio is an independent app development studio based in Japan. We design simple iOS apps that fit naturally into daily routines.</p>
+        <p>Momokusa Studio is a solo developer making iOS apps. We value simplicity and ease of use.</p>
         <p>All of our apps are supported by advertising and optional in-app purchases. We do not collect any personally identifiable information from users.</p>
       </div>
     </section>
@@ -345,7 +354,19 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/">Privacy Policy</a>
           </div>
         </div>
- 
+
+        <div class="app-card paperplanner">
+          <div class="app-header">
+            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-name">PaperPlanner</div>
+          </div>
+          <p class="app-tagline">A simple planner app.</p>
+          <div class="app-links">
+            <a class="app-link" href="https://apps.apple.com/app/id6781217959">View on App Store ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/paperplanner-privacy/">Privacy Policy</a>
+          </div>
+        </div>
+
       </div>
     </section>
  

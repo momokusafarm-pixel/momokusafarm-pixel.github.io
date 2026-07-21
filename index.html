@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS アプリ開発スタジオ。Eventick、Habitile、FindMemo などをリリース。">
+  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner などをリリース。">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -24,8 +24,10 @@
       --habitile-bg: #e0f2f1;
       --findmemo: #F97316;
       --findmemo-bg: #fff7ed;
+      --paperplanner: #A16207;
+      --paperplanner-bg: #fefce8;
     }
- 
+
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0f1115;
@@ -41,6 +43,8 @@
         --habitile-bg: #1f3a37;
         --findmemo: #fb923c;
         --findmemo-bg: #3a2814;
+        --paperplanner: #d4a84b;
+        --paperplanner-bg: #38300f;
       }
     }
  
@@ -238,6 +242,11 @@
       --app-color: var(--findmemo);
       --app-bg: var(--findmemo-bg);
     }
+
+    .app-card.paperplanner {
+      --app-color: var(--paperplanner);
+      --app-bg: var(--paperplanner-bg);
+    }
  
     /* ===== お問い合わせ ===== */
     .contact a {
@@ -300,13 +309,13 @@
  
     <header>
       <div class="logo">Momokusa Studio</div>
-      <p class="tagline">日常を少し整える iOS アプリを作っています。</p>
+      <p class="tagline">iOS アプリを開発しています。</p>
     </header>
  
     <section>
       <h2>About</h2>
       <div class="description">
-        <p>Momokusa Studio は、日本の独立系アプリ開発スタジオです。シンプルで日々の暮らしに寄り添うアプリづくりを目指しています。</p>
+        <p>Momokusa Studio は、個人で iOS アプリを開発・運営しています。シンプルで使いやすいことを大切にしています。</p>
         <p>すべてのアプリは広告と一部機能の購入によって運営されており、ユーザーの個人を特定するデータは収集していません。</p>
       </div>
     </section>
@@ -350,7 +359,19 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/">プライバシーポリシー</a>
           </div>
         </div>
- 
+
+        <div class="app-card paperplanner">
+          <div class="app-header">
+            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-name">PaperPlanner</div>
+          </div>
+          <p class="app-tagline">シンプルな手帳アプリ。</p>
+          <div class="app-links">
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6781217959">App Store で見る ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/paperplanner-privacy/">プライバシーポリシー</a>
+          </div>
+        </div>
+
       </div>
     </section>
  
