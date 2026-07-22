@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner などをリリース。">
+  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner、Pomonote などをリリース。">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -26,6 +26,8 @@
       --findmemo-bg: #fff7ed;
       --paperplanner: #A16207;
       --paperplanner-bg: #fefce8;
+      --pomonote: #2F80ED;
+      --pomonote-bg: #eaf4fe;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -45,6 +47,8 @@
         --findmemo-bg: #3a2814;
         --paperplanner: #d4a84b;
         --paperplanner-bg: #38300f;
+        --pomonote: #56CCF2;
+        --pomonote-bg: #12324d;
       }
     }
  
@@ -192,6 +196,19 @@
       border-radius: 6px;
       background: var(--app-color, var(--accent));
     }
+
+    .app-icon {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 9px;
+      object-fit: cover;
+    }
  
     .app-name {
       font-size: 19px;
@@ -246,6 +263,11 @@
     .app-card.paperplanner {
       --app-color: var(--paperplanner);
       --app-bg: var(--paperplanner-bg);
+    }
+
+    .app-card.pomonote {
+      --app-color: var(--pomonote);
+      --app-bg: var(--pomonote-bg);
     }
  
     /* ===== お問い合わせ ===== */
@@ -326,7 +348,7 @@
  
         <div class="app-card eventick">
           <div class="app-header">
-            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-icon"><img src="/icons/eventick.png" alt=""></div>
             <div class="app-name">Eventick</div>
           </div>
           <p class="app-tagline">予定までの時間を、日数＋時間でカウントダウン。</p>
@@ -338,7 +360,7 @@
  
         <div class="app-card habitile">
           <div class="app-header">
-            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-icon"><img src="/icons/habitile.png" alt=""></div>
             <div class="app-name">Habitile</div>
           </div>
           <p class="app-tagline">タイルで習慣を可視化する、シンプルな習慣トラッカー。</p>
@@ -350,7 +372,7 @@
  
         <div class="app-card findmemo">
           <div class="app-header">
-            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-icon"><img src="/icons/findmemo.png" alt=""></div>
             <div class="app-name">FindMemo</div>
           </div>
           <p class="app-tagline">フォルダで整理して、検索ですぐ見つかるメモ。</p>
@@ -362,7 +384,7 @@
 
         <div class="app-card paperplanner">
           <div class="app-header">
-            <div class="app-icon"><div class="app-icon-inner"></div></div>
+            <div class="app-icon"><img src="/icons/paperplanner.png" alt=""></div>
             <div class="app-name">PaperPlanner</div>
           </div>
           <p class="app-tagline">シンプルな手帳アプリ。</p>
@@ -373,6 +395,18 @@
         </div>
 
       </div>
+        <div class="app-card pomonote">
+          <div class="app-header">
+            <div class="app-icon"><img src="/icons/pomonote.png" alt=""></div>
+            <div class="app-name">Pomonote</div>
+          </div>
+          <p class="app-tagline">シンプルなポモドーロタイマー。</p>
+          <div class="app-links">
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6793130617">App Store で見る ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/pomonote-privacy/">プライバシーポリシー</a>
+          </div>
+        </div>
+
     </section>
  
     <section class="contact">
