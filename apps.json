@@ -1,0 +1,66 @@
+{
+  "_comment": "Momokusa Studio の「その他のアプリ」一覧の正本。各アプリは起動時ではなく「他のアプリ」画面を開いたときに取得し、失敗したらアプリ内蔵の一覧にフォールバックする。新しいアプリを全アプリに載せたいときは、ここに1件足して push するだけでよい（アプリの再リリースは不要）。配信前のアプリは appStoreId と appStoreUrl を空文字にしておく＝一覧に出ない。",
+  "updatedAt": "2026-07-27",
+  "apps": [
+    {
+      "name": "PaperPlanner",
+      "nameEn": "PaperPlanner",
+      "description": "シンプルな手帳アプリ",
+      "descriptionEn": "A simple planner app",
+      "appStoreId": "6781217959",
+      "appStoreUrl": "https://apps.apple.com/app/id6781217959",
+      "iconAsset": "packages/momokusa_shared/assets/icons/paperplanner.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/paperplanner.png"
+    },
+    {
+      "name": "Eventick",
+      "nameEn": "Eventick",
+      "description": "イベント・予定をシンプルに管理",
+      "descriptionEn": "Simple event and schedule management",
+      "appStoreId": "6766795134",
+      "appStoreUrl": "https://apps.apple.com/jp/app/eventick/id6766795134",
+      "iconAsset": "packages/momokusa_shared/assets/icons/eventick.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/eventick.png"
+    },
+    {
+      "name": "Habitile",
+      "nameEn": "Habitile",
+      "description": "習慣をタイルで管理",
+      "descriptionEn": "Manage habits with tiles",
+      "appStoreId": "6764686513",
+      "appStoreUrl": "https://apps.apple.com/jp/app/habitile/id6764686513",
+      "iconAsset": "packages/momokusa_shared/assets/icons/habitile.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/habitile.png"
+    },
+    {
+      "name": "FindMemo",
+      "nameEn": "FindMemo",
+      "description": "シンプルで使いやすいメモアプリ",
+      "descriptionEn": "Simple and easy memo app",
+      "appStoreId": "6774867969",
+      "appStoreUrl": "https://apps.apple.com/jp/app/findmemo/id6774867969",
+      "iconAsset": "packages/momokusa_shared/assets/icons/findmemo.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/findmemo.png"
+    },
+    {
+      "name": "Pomonote",
+      "nameEn": "Pomonote",
+      "description": "シンプルなポモドーロタイマー",
+      "descriptionEn": "A simple Pomodoro timer",
+      "appStoreId": "6793130617",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6793130617",
+      "iconAsset": "packages/momokusa_shared/assets/icons/pomonote.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/pomonote.png"
+    },
+    {
+      "name": "TabCalc",
+      "nameEn": "TabCalc",
+      "description": "タブごとに計算履歴が残る電卓",
+      "descriptionEn": "A calculator that keeps a tape in every tab",
+      "appStoreId": "",
+      "appStoreUrl": "",
+      "iconAsset": "packages/momokusa_shared/assets/icons/tabcalc.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/tabcalc.png"
+    }
+  ]
+}
