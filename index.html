@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner、Pomonote などをリリース。">
+  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner、Pomonote、TabCalc などをリリース。">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -28,6 +28,8 @@
       --paperplanner-bg: #fefce8;
       --pomonote: #2F80ED;
       --pomonote-bg: #eaf4fe;
+      --tabcalc: #C2410C;
+      --tabcalc-bg: #fff7ed;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -49,6 +51,8 @@
         --paperplanner-bg: #38300f;
         --pomonote: #56CCF2;
         --pomonote-bg: #12324d;
+        --tabcalc: #fb923c;
+        --tabcalc-bg: #43241a;
       }
     }
  
@@ -269,6 +273,11 @@
       --app-color: var(--pomonote);
       --app-bg: var(--pomonote-bg);
     }
+
+    .app-card.tabcalc {
+      --app-color: var(--tabcalc);
+      --app-bg: var(--tabcalc-bg);
+    }
  
     /* ===== お問い合わせ ===== */
     .contact a {
@@ -403,6 +412,17 @@
           <div class="app-links">
             <a class="app-link" href="https://apps.apple.com/jp/app/id6793130617">App Store で見る ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/pomonote-privacy/">プライバシーポリシー</a>
+          </div>
+        </div>
+
+        <div class="app-card tabcalc">
+          <div class="app-header">
+            <div class="app-icon"><img src="/icons/tabcalc.png" alt=""></div>
+            <div class="app-name">TabCalc</div>
+          </div>
+          <p class="app-tagline">タブごとに計算履歴が残る電卓。</p>
+          <div class="app-links">
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/tabcalc-privacy/">プライバシーポリシー</a>
           </div>
         </div>
 

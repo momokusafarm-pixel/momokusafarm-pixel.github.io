@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — Making iOS apps. Releasing Eventick, Habitile, FindMemo, PaperPlanner, Pomonote, and more.">
+  <meta name="description" content="Momokusa Studio — Making iOS apps. Releasing Eventick, Habitile, FindMemo, PaperPlanner, Pomonote, TabCalc, and more.">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/en/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
@@ -28,6 +28,8 @@
       --paperplanner-bg: #fefce8;
       --pomonote: #2F80ED;
       --pomonote-bg: #eaf4fe;
+      --tabcalc: #C2410C;
+      --tabcalc-bg: #fff7ed;
     }
  
     @media (prefers-color-scheme: dark) {
@@ -49,6 +51,8 @@
         --paperplanner-bg: #38300f;
         --pomonote: #56CCF2;
         --pomonote-bg: #12324d;
+        --tabcalc: #fb923c;
+        --tabcalc-bg: #43241a;
       }
     }
  
@@ -267,6 +271,11 @@
       --app-color: var(--pomonote);
       --app-bg: var(--pomonote-bg);
     }
+
+    .app-card.tabcalc {
+      --app-color: var(--tabcalc);
+      --app-bg: var(--tabcalc-bg);
+    }
  
     .contact a {
       color: var(--accent);
@@ -398,6 +407,17 @@
           <div class="app-links">
             <a class="app-link" href="https://apps.apple.com/app/id6793130617">View on App Store ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/pomonote-privacy/">Privacy Policy</a>
+          </div>
+        </div>
+
+        <div class="app-card tabcalc">
+          <div class="app-header">
+            <div class="app-icon"><img src="/icons/tabcalc.png" alt=""></div>
+            <div class="app-name">TabCalc</div>
+          </div>
+          <p class="app-tagline">A calculator that keeps a tape in every tab.</p>
+          <div class="app-links">
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/tabcalc-privacy/">Privacy Policy</a>
           </div>
         </div>
 
