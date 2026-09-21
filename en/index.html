@@ -30,6 +30,8 @@
       --pomonote-bg: #eaf4fe;
       --tabcalc: #C2410C;
       --tabcalc-bg: #fff7ed;
+      --souki: #2450A8;
+      --souki-bg: #eef2fb;
     }
  
     @media (prefers-color-scheme: dark) {
@@ -53,6 +55,8 @@
         --pomonote-bg: #12324d;
         --tabcalc: #fb923c;
         --tabcalc-bg: #43241a;
+        --souki: #8FA8E0;
+        --souki-bg: #1a2440;
       }
     }
  
@@ -276,6 +280,10 @@
       --app-color: var(--tabcalc);
       --app-bg: var(--tabcalc-bg);
     }
+    .app-card.souki {
+      --app-color: var(--souki);
+      --app-bg: var(--souki-bg);
+    }
  
     .contact a {
       color: var(--accent);
@@ -419,6 +427,18 @@
           <div class="app-links">
             <a class="app-link" href="https://apps.apple.com/app/id6794603440">View on App Store ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/tabcalc-privacy/">Privacy Policy</a>
+          </div>
+
+        </div>
+
+        <div class="app-card souki">
+          <div class="app-header">
+            <div class="app-icon"><img src="/icons/souki.png" alt=""></div>
+            <div class="app-name">Souki</div>
+          </div>
+          <p class="app-tagline">Spaced repetition planner for paper workbooks.</p>
+          <div class="app-links">
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/souki-privacy/">Privacy Policy</a>
           </div>
         </div>
 
