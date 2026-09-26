@@ -1,6 +1,6 @@
 {
   "_comment": "Momokusa Studio の「その他のアプリ」一覧の正本。各アプリは起動時ではなく「他のアプリ」画面を開いたときに取得し、失敗したらアプリ内蔵の一覧にフォールバックする。新しいアプリを全アプリに載せたいときは、ここに1件足して push するだけでよい（アプリの再リリースは不要）。配信前のアプリは appStoreId と appStoreUrl を空文字にしておく＝一覧に出ない。",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-09-26",
   "apps": [
     {
       "name": "PaperPlanner",
@@ -61,6 +61,16 @@
       "appStoreUrl": "https://apps.apple.com/jp/app/id6794603440",
       "iconAsset": "packages/momokusa_shared/assets/icons/tabcalc.png",
       "iconUrl": "https://momokusafarm-pixel.github.io/icons/tabcalc.png"
+    },
+    {
+      "name": "Souki",
+      "nameEn": "Souki",
+      "description": "紙の問題集の解き直しを自動で管理",
+      "descriptionEn": "Auto-scheduled re-solving for paper workbooks",
+      "appStoreId": "6814663640",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6814663640",
+      "iconAsset": "packages/momokusa_shared/assets/icons/souki.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/souki.png"
     }
   ]
 }
