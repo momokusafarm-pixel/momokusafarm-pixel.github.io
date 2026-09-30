@@ -1,6 +1,6 @@
 {
   "_comment": "Momokusa Studio の「その他のアプリ」一覧の正本。各アプリは起動時ではなく「他のアプリ」画面を開いたときに取得し、失敗したらアプリ内蔵の一覧にフォールバックする。新しいアプリを全アプリに載せたいときは、ここに1件足して push するだけでよい（アプリの再リリースは不要）。配信前のアプリは appStoreId と appStoreUrl を空文字にしておく＝一覧に出ない。",
-  "updatedAt": "2026-09-26",
+  "updatedAt": "2026-09-30",
   "apps": [
     {
       "name": "PaperPlanner",
@@ -71,6 +71,16 @@
       "appStoreUrl": "https://apps.apple.com/jp/app/id6814663640",
       "iconAsset": "packages/momokusa_shared/assets/icons/souki.png",
       "iconUrl": "https://momokusafarm-pixel.github.io/icons/souki.png"
+    },
+    {
+      "name": "StudyPace",
+      "nameEn": "StudyPace",
+      "description": "試験日から逆算する勉強時間の記録",
+      "descriptionEn": "Study time tracker that counts back from your exam",
+      "appStoreId": "6816657995",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6816657995",
+      "iconAsset": "packages/momokusa_shared/assets/icons/studypace.png",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/studypace.png"
     }
   ]
 }
