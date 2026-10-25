@@ -3,360 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。Eventick、Habitile、FindMemo、PaperPlanner、Pomonote、TabCalc などをリリース。">
+  <meta name="description" content="Momokusa Studio — iOS アプリを開発しています。 Eventick, Habitile, FindMemo, PaperPlanner, Pomonote, TabCalc, Souki, StudyPace, MetaNote.">
   <title>Momokusa Studio</title>
   <link rel="canonical" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="ja" href="https://momokusafarm-pixel.github.io/">
   <link rel="alternate" hreflang="en" href="https://momokusafarm-pixel.github.io/en/">
+  <link rel="alternate" hreflang="de" href="https://momokusafarm-pixel.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://momokusafarm-pixel.github.io/fr/">
+  <link rel="alternate" hreflang="it" href="https://momokusafarm-pixel.github.io/it/">
+  <link rel="alternate" hreflang="es" href="https://momokusafarm-pixel.github.io/es/">
+  <link rel="alternate" hreflang="pt-BR" href="https://momokusafarm-pixel.github.io/pt-br/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://momokusafarm-pixel.github.io/zh-hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://momokusafarm-pixel.github.io/zh-hant/">
+  <link rel="alternate" hreflang="ko" href="https://momokusafarm-pixel.github.io/ko/">
   <link rel="alternate" hreflang="x-default" href="https://momokusafarm-pixel.github.io/">
   <style>
-    :root {
-      --bg: #ffffff;
-      --bg-subtle: #f7f7f8;
-      --text: #1a1a1a;
-      --text-muted: #6b7280;
-      --border: #e5e7eb;
-      --accent: #1f2937;
- 
-      --eventick: #3B82F6;
-      --eventick-bg: #eff6ff;
-      --habitile: #00695C;
-      --habitile-bg: #e0f2f1;
-      --findmemo: #F97316;
-      --findmemo-bg: #fff7ed;
-      --paperplanner: #A16207;
-      --paperplanner-bg: #fefce8;
-      --pomonote: #2F80ED;
-      --pomonote-bg: #eaf4fe;
-      --tabcalc: #C2410C;
-      --tabcalc-bg: #fff7ed;
-      --souki: #2450A8;
-      --souki-bg: #eef2fb;
-      --studypace: #B91C1C;
-      --studypace-bg: #fef2f2;
-    }
-
+    :root { --bg:#ffffff; --bg-subtle:#f7f7f8; --text:#1a1a1a; --text-muted:#6b7280; --border:#e5e7eb; --accent:#1f2937; }
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1115;
-        --bg-subtle: #1a1d24;
-        --text: #f3f4f6;
-        --text-muted: #9ca3af;
-        --border: #2a2f3a;
-        --accent: #f3f4f6;
- 
-        --eventick: #60a5fa;
-        --eventick-bg: #1e3a5f;
-        --habitile: #4db6ac;
-        --habitile-bg: #1f3a37;
-        --findmemo: #fb923c;
-        --findmemo-bg: #3a2814;
-        --paperplanner: #d4a84b;
-        --paperplanner-bg: #38300f;
-        --pomonote: #56CCF2;
-        --pomonote-bg: #12324d;
-        --tabcalc: #fb923c;
-        --tabcalc-bg: #43241a;
-        --souki: #8FA8E0;
-        --souki-bg: #1a2440;
-      }
+      :root { --bg:#0f1115; --bg-subtle:#1a1d24; --text:#f3f4f6; --text-muted:#9ca3af; --border:#2a2f3a; --accent:#f3f4f6; }
     }
- 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { -webkit-text-size-adjust:100%; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Sans","Hiragino Kaku Gothic ProN","PingFang SC","PingFang TC","Apple SD Gothic Neo",Meiryo,"Segoe UI",Roboto,sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.7; font-size:16px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+    .container { max-width:760px; margin:0 auto; padding:64px 24px 80px; }
+    .lang-switch { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:2px 4px; margin-bottom:24px; font-size:13px; }
+    .lang-switch a, .lang-switch span { color:var(--text-muted); text-decoration:none; padding:4px 8px; border-radius:6px; }
+    .lang-switch a:hover { color:var(--accent); background:var(--bg-subtle); }
+    .lang-switch .current { color:var(--accent); font-weight:600; }
+    header { margin-bottom:64px; }
+    .logo { font-size:28px; font-weight:700; letter-spacing:-0.02em; color:var(--text); margin-bottom:12px; }
+    .tagline { color:var(--text-muted); font-size:17px; }
+    section { margin-bottom:56px; }
+    h2 { font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:20px; }
+    .description { font-size:16px; color:var(--text); max-width:620px; }
+    .description p + p { margin-top:14px; }
+    .apps { display:grid; gap:16px; }
+    .app-card { display:block; padding:24px 28px; background:var(--bg-subtle); border:1px solid var(--border); border-radius:14px; text-decoration:none; color:var(--text); transition:transform .15s ease, border-color .15s ease; }
+    .app-card:hover { transform:translateY(-2px); border-color:var(--app-color, var(--accent)); }
+    .app-card .app-header { display:flex; align-items:center; gap:14px; margin-bottom:10px; }
+    .app-icon { width:44px; height:44px; border-radius:10px; flex-shrink:0; border:1px solid var(--border); overflow:hidden; padding:0; background:var(--app-bg, var(--bg-subtle)); }
+    .app-icon img { width:100%; height:100%; display:block; border-radius:9px; object-fit:cover; }
+    .app-name { font-size:19px; font-weight:600; letter-spacing:-0.01em; }
+    .app-tagline { color:var(--text-muted); font-size:15px; margin-bottom:16px; margin-left:58px; }
+    .app-links { display:flex; gap:8px; flex-wrap:wrap; margin-left:58px; }
+    .app-link { font-size:13px; color:var(--app-color, var(--accent)); text-decoration:none; padding:6px 12px; background:var(--app-bg, var(--bg-subtle)); border-radius:6px; font-weight:500; }
+    .app-link:hover { text-decoration:underline; }
+    .contact a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--border); padding-bottom:1px; }
+    .contact a:hover { border-bottom-color:var(--accent); }
+    footer { margin-top:80px; padding-top:32px; border-top:1px solid var(--border); color:var(--text-muted); font-size:13px; }
+    @media (max-width:480px) {
+      .container { padding:40px 20px 56px; }
+      .logo { font-size:24px; }
+      header { margin-bottom:48px; }
+      section { margin-bottom:44px; }
+      .app-card { padding:20px 22px; }
+      .app-tagline, .app-links { margin-left:0; }
+      .lang-switch { justify-content:flex-start; }
     }
- 
-    html {
-      -webkit-text-size-adjust: 100%;
-    }
- 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-                   "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo,
-                   "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
- 
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 64px 24px 80px;
-    }
- 
-    /* ===== 言語切り替え ===== */
-    .lang-switch {
-      text-align: right;
-      margin-bottom: 24px;
-      font-size: 13px;
-    }
- 
-    .lang-switch a,
-    .lang-switch span {
-      color: var(--text-muted);
-      text-decoration: none;
-      padding: 4px 8px;
-    }
- 
-    .lang-switch a:hover {
-      color: var(--accent);
-    }
- 
-    .lang-switch .current {
-      color: var(--accent);
-      font-weight: 600;
-    }
- 
-    .lang-switch .separator {
-      color: var(--border);
-    }
- 
-    /* ===== ヘッダー ===== */
-    header {
-      margin-bottom: 64px;
-    }
- 
-    .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
- 
-    .tagline {
-      color: var(--text-muted);
-      font-size: 17px;
-    }
- 
-    /* ===== セクション ===== */
-    section {
-      margin-bottom: 56px;
-    }
- 
-    h2 {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
- 
-    .description {
-      font-size: 16px;
-      color: var(--text);
-      max-width: 620px;
-    }
- 
-    .description p + p {
-      margin-top: 14px;
-    }
- 
-    /* ===== アプリカード ===== */
-    .apps {
-      display: grid;
-      gap: 16px;
-    }
- 
-    .app-card {
-      display: block;
-      padding: 24px 28px;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      text-decoration: none;
-      color: var(--text);
-      transition: transform 0.15s ease, border-color 0.15s ease;
-    }
- 
-    .app-card:hover {
-      transform: translateY(-2px);
-      border-color: var(--app-color, var(--accent));
-    }
- 
-    .app-card .app-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 10px;
-    }
- 
-    .app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      background: var(--app-bg, var(--bg-subtle));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      border: 1px solid var(--border);
-    }
- 
-    .app-icon-inner {
-      width: 24px;
-      height: 24px;
-      border-radius: 6px;
-      background: var(--app-color, var(--accent));
-    }
-
-    .app-icon {
-      overflow: hidden;
-      padding: 0;
-    }
-
-    .app-icon img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      border-radius: 9px;
-      object-fit: cover;
-    }
- 
-    .app-name {
-      font-size: 19px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
- 
-    .app-tagline {
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 16px;
-      margin-left: 58px;
-    }
- 
-    .app-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-left: 58px;
-    }
- 
-    .app-link {
-      font-size: 13px;
-      color: var(--app-color, var(--accent));
-      text-decoration: none;
-      padding: 6px 12px;
-      background: var(--app-bg, var(--bg-subtle));
-      border-radius: 6px;
-      font-weight: 500;
-    }
- 
-    .app-link:hover {
-      text-decoration: underline;
-    }
- 
-    /* Eventick / Habitile 個別変数 */
-    .app-card.eventick {
-      --app-color: var(--eventick);
-      --app-bg: var(--eventick-bg);
-    }
- 
-    .app-card.habitile {
-      --app-color: var(--habitile);
-      --app-bg: var(--habitile-bg);
-    }
- 
-    .app-card.findmemo {
-      --app-color: var(--findmemo);
-      --app-bg: var(--findmemo-bg);
-    }
-
-    .app-card.paperplanner {
-      --app-color: var(--paperplanner);
-      --app-bg: var(--paperplanner-bg);
-    }
-
-    .app-card.pomonote {
-      --app-color: var(--pomonote);
-      --app-bg: var(--pomonote-bg);
-    }
-
-    .app-card.tabcalc {
-      --app-color: var(--tabcalc);
-      --app-bg: var(--tabcalc-bg);
-    }
-    .app-card.souki {
-      --app-color: var(--souki);
-      --app-bg: var(--souki-bg);
-    }
-    .app-card.studypace {
-      --app-color: var(--studypace);
-      --app-bg: var(--studypace-bg);
-    }
- 
-    /* ===== お問い合わせ ===== */
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1px;
-    }
- 
-    .contact a:hover {
-      border-bottom-color: var(--accent);
-    }
- 
-    /* ===== フッター ===== */
-    footer {
-      margin-top: 80px;
-      padding-top: 32px;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 13px;
-    }
- 
-    /* ===== モバイル調整 ===== */
-    @media (max-width: 480px) {
-      .container {
-        padding: 40px 20px 56px;
-      }
- 
-      .logo {
-        font-size: 24px;
-      }
- 
-      header {
-        margin-bottom: 48px;
-      }
- 
-      section {
-        margin-bottom: 44px;
-      }
- 
-      .app-card {
-        padding: 20px 22px;
-      }
- 
-      .app-tagline,
-      .app-links {
-        margin-left: 0;
-      }
-    }
+    :root { --eventick:#3B82F6; --eventick-bg:#eff6ff; --habitile:#00695C; --habitile-bg:#e0f2f1; --findmemo:#F97316; --findmemo-bg:#fff7ed; --paperplanner:#A16207; --paperplanner-bg:#fefce8; --pomonote:#2F80ED; --pomonote-bg:#eaf4fe; --tabcalc:#C2410C; --tabcalc-bg:#fff7ed; --souki:#2450A8; --souki-bg:#eef2fb; --studypace:#B91C1C; --studypace-bg:#fef2f2; --metanote:#6D28D9; --metanote-bg:#f5f3ff; }
+    @media (prefers-color-scheme: dark) { :root { --eventick:#60a5fa; --eventick-bg:#1e3a5f; --habitile:#4db6ac; --habitile-bg:#1f3a37; --findmemo:#fb923c; --findmemo-bg:#3a2814; --paperplanner:#d4a84b; --paperplanner-bg:#38300f; --pomonote:#56CCF2; --pomonote-bg:#12324d; --tabcalc:#fb923c; --tabcalc-bg:#43241a; --souki:#8FA8E0; --souki-bg:#1a2440; --studypace:#f87171; --studypace-bg:#3a1a1a; --metanote:#a78bfa; --metanote-bg:#2a2140; } }
+    .app-card.eventick { --app-color:var(--eventick); --app-bg:var(--eventick-bg); }
+    .app-card.habitile { --app-color:var(--habitile); --app-bg:var(--habitile-bg); }
+    .app-card.findmemo { --app-color:var(--findmemo); --app-bg:var(--findmemo-bg); }
+    .app-card.paperplanner { --app-color:var(--paperplanner); --app-bg:var(--paperplanner-bg); }
+    .app-card.pomonote { --app-color:var(--pomonote); --app-bg:var(--pomonote-bg); }
+    .app-card.tabcalc { --app-color:var(--tabcalc); --app-bg:var(--tabcalc-bg); }
+    .app-card.souki { --app-color:var(--souki); --app-bg:var(--souki-bg); }
+    .app-card.studypace { --app-color:var(--studypace); --app-bg:var(--studypace-bg); }
+    .app-card.metanote { --app-color:var(--metanote); --app-bg:var(--metanote-bg); }
   </style>
 </head>
 <body>
   <div class="container">
- 
-    <div class="lang-switch">
+
+    <nav class="lang-switch" aria-label="Language">
       <span class="current">日本語</span>
-      <span class="separator">/</span>
-      <a href="/en/">English</a>
-    </div>
- 
+      <a href="/en/" lang="en" hreflang="en">English</a>
+      <a href="/de/" lang="de" hreflang="de">Deutsch</a>
+      <a href="/fr/" lang="fr" hreflang="fr">Français</a>
+      <a href="/it/" lang="it" hreflang="it">Italiano</a>
+      <a href="/es/" lang="es" hreflang="es">Español</a>
+      <a href="/pt-br/" lang="pt-BR" hreflang="pt-BR">Português</a>
+      <a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+      <a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+      <a href="/ko/" lang="ko" hreflang="ko">한국어</a>
+    </nav>
+
     <header>
       <div class="logo">Momokusa Studio</div>
       <p class="tagline">iOS アプリを開発しています。</p>
     </header>
- 
+
     <section>
       <h2>About</h2>
       <div class="description">
@@ -364,50 +102,47 @@
         <p>すべてのアプリは広告と一部機能の購入によって運営されており、ユーザーの個人を特定するデータは収集していません。</p>
       </div>
     </section>
- 
+
     <section>
       <h2>Apps</h2>
       <div class="apps">
- 
+
         <div class="app-card eventick">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/eventick.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/eventick.png" alt="" width="44" height="44"></div>
             <div class="app-name">Eventick</div>
           </div>
           <p class="app-tagline">予定までの時間を、日数＋時間でカウントダウン。</p>
           <div class="app-links">
-            <a class="app-link" href="https://apps.apple.com/jp/app/eventick/id6766795134">App Store で見る ↗</a>
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6766795134">App Store で見る ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/eventick-privacy/">プライバシーポリシー</a>
           </div>
         </div>
- 
         <div class="app-card habitile">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/habitile.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/habitile.png" alt="" width="44" height="44"></div>
             <div class="app-name">Habitile</div>
           </div>
           <p class="app-tagline">タイルで習慣を可視化する、シンプルな習慣トラッカー。</p>
           <div class="app-links">
-            <a class="app-link" href="https://apps.apple.com/jp/app/habitile/id6764686513">App Store で見る ↗</a>
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6764686513">App Store で見る ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/habitile-privacy/">プライバシーポリシー</a>
           </div>
         </div>
- 
         <div class="app-card findmemo">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/findmemo.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/findmemo.png" alt="" width="44" height="44"></div>
             <div class="app-name">FindMemo</div>
           </div>
           <p class="app-tagline">フォルダで整理して、検索ですぐ見つかるメモ。</p>
           <div class="app-links">
-            <a class="app-link" href="https://apps.apple.com/jp/app/findmemo/id6774867969">App Store で見る ↗</a>
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6774867969">App Store で見る ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/findmemo-privacy/">プライバシーポリシー</a>
           </div>
         </div>
-
         <div class="app-card paperplanner">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/paperplanner.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/paperplanner.png" alt="" width="44" height="44"></div>
             <div class="app-name">PaperPlanner</div>
           </div>
           <p class="app-tagline">シンプルな手帳アプリ。</p>
@@ -416,10 +151,9 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/paperplanner-privacy/">プライバシーポリシー</a>
           </div>
         </div>
-
         <div class="app-card pomonote">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/pomonote.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/pomonote.png" alt="" width="44" height="44"></div>
             <div class="app-name">Pomonote</div>
           </div>
           <p class="app-tagline">シンプルなポモドーロタイマー。</p>
@@ -428,10 +162,9 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/pomonote-privacy/">プライバシーポリシー</a>
           </div>
         </div>
-
         <div class="app-card tabcalc">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/tabcalc.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/tabcalc.png" alt="" width="44" height="44"></div>
             <div class="app-name">TabCalc</div>
           </div>
           <p class="app-tagline">タブごとに計算履歴が残る電卓。</p>
@@ -439,12 +172,10 @@
             <a class="app-link" href="https://apps.apple.com/jp/app/id6794603440">App Store で見る ↗</a>
             <a class="app-link" href="https://momokusafarm-pixel.github.io/tabcalc-privacy/">プライバシーポリシー</a>
           </div>
-
         </div>
-
         <div class="app-card souki">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/souki.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/souki.png" alt="" width="44" height="44"></div>
             <div class="app-name">Souki</div>
           </div>
           <p class="app-tagline">紙の問題集の解き直しを、復習のタイミングごと自動で管理。</p>
@@ -453,10 +184,9 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/souki-privacy/">プライバシーポリシー</a>
           </div>
         </div>
-
         <div class="app-card studypace">
           <div class="app-header">
-            <div class="app-icon"><img src="/icons/studypace.png" alt=""></div>
+            <div class="app-icon"><img src="/icons/studypace.png" alt="" width="44" height="44"></div>
             <div class="app-name">StudyPace</div>
           </div>
           <p class="app-tagline">試験日から逆算して、今日あと何分かだけを教える勉強時間アプリ。</p>
@@ -465,20 +195,30 @@
             <a class="app-link" href="https://momokusafarm-pixel.github.io/studypace-privacy/">プライバシーポリシー</a>
           </div>
         </div>
+        <div class="app-card metanote">
+          <div class="app-header">
+            <div class="app-icon"><img src="/icons/metanote.png" alt="" width="44" height="44"></div>
+            <div class="app-name">MetaNote</div>
+          </div>
+          <p class="app-tagline">時間を置いて読み返し、最後まで残った言葉だけを残す読書ノート。</p>
+          <div class="app-links">
+            <a class="app-link" href="https://apps.apple.com/jp/app/id6822262896">App Store で見る ↗</a>
+            <a class="app-link" href="https://momokusafarm-pixel.github.io/metanote-privacy/">プライバシーポリシー</a>
+          </div>
+        </div>
 
       </div>
-
     </section>
- 
+
     <section class="contact">
       <h2>Contact</h2>
       <p>ご質問・ご要望は <a href="mailto:momokusa.farm@gmail.com">momokusa.farm@gmail.com</a> までお気軽にどうぞ。</p>
     </section>
- 
+
     <footer>
       © 2026 Momokusa Studio. All rights reserved.
     </footer>
- 
+
   </div>
 </body>
 </html>
