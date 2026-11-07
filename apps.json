@@ -1,6 +1,6 @@
 {
   "_comment": "Momokusa Studio の「その他のアプリ」一覧の正本。各アプリは起動時ではなく「他のアプリ」画面を開いたときに取得し、失敗したらアプリ内蔵の一覧にフォールバックする。新しいアプリを全アプリに載せたいときは、ここに1件足して push するだけでよい（アプリの再リリースは不要）。配信前のアプリは appStoreId と appStoreUrl を空文字にしておく＝一覧に出ない。",
-  "updatedAt": "2026-10-25",
+  "updatedAt": "2026-11-07",
   "apps": [
     {
       "name": "PaperPlanner",
@@ -91,6 +91,16 @@
       "appStoreUrl": "https://apps.apple.com/jp/app/id6822262896",
       "iconAsset": "packages/momokusa_shared/assets/icons/metanote.png",
       "iconUrl": "https://momokusafarm-pixel.github.io/icons/metanote.png"
+    },
+    {
+      "name": "名著文庫",
+      "nameEn": "Meicho Bunko",
+      "description": "日本の名著 214 冊を無料で、紙の本のように読む",
+      "descriptionEn": "214 Japanese classics, free, read like a paper book (Japan App Store only)",
+      "appStoreId": "6829955116",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6829955116",
+      "iconAsset": "",
+      "iconUrl": "https://momokusafarm-pixel.github.io/icons/meicho.png"
     }
   ]
 }
